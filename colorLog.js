@@ -12,6 +12,7 @@ var colors = require('colors');
 var color = 'yellow';
 
 var _loggo = function () {
+    console.log('LETS LOG WITH THE COLOR', color);
     var args = Array.prototype.slice.call(arguments);
     args.forEach(function (arg, idx) {
         args[idx] = colors[color](args[idx]);
@@ -24,17 +25,21 @@ var loggo = function () {
     return _loggo.apply(this, arguments);
 };
 
-for (var key in colors.styles) {
-    loggo[key] = function () {
-        color = key;
+var _makeColorMethod = function (c) {
+    return function () {
+        color = c;
         return _loggo.apply(this, arguments);
-    };
+    }
+};
+
+for (var key in colors.styles) {
+    loggo[key] = _makeColorMethod(key);
 }
 
 loggo.listColors = function () {
     var arr = [];
     for (var key in colors.styles) {
-        arr.push(key)
+        arr.push(key);
     }
     return arr;
 };
