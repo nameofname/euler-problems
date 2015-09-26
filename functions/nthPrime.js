@@ -52,6 +52,8 @@ function findNthPrime (nth) {
     return primes[primes.length - 1];
 }
 
-console.log(findNthPrime(10001), primes, shiterations);
+findNthPrime.getPrimesArray = function () {
+    return primes;
+};
 
 module.exports = findNthPrime;
