@@ -12,7 +12,6 @@ var colors = require('colors');
 var color = 'yellow';
 
 var _loggo = function () {
-    console.log('LETS LOG WITH THE COLOR', color);
     var args = Array.prototype.slice.call(arguments);
     args.forEach(function (arg, idx) {
         args[idx] = colors[color](args[idx]);
