@@ -38,12 +38,11 @@ var desiredSpots = 0;
 
 var combinations = [];
 var currCombo = [];
-//var lastIndex = 0;
-//var spotIndex = -1;
+
 
 var _buildUniques = function (lastIndex, spotIndex) {
 
-    log.green('build uniques from', lastIndex, 'to', startingArr.length);
+    log.green('build uniques from', (lastIndex + 1), 'to', startingArr.length - 1);
 
     // todo - use the last index from curr combo to get last index, this way is busted.
     for (var index = (lastIndex + 1); index < startingArr.length; index++) {
@@ -64,8 +63,8 @@ var _buildUniques = function (lastIndex, spotIndex) {
 
             // todo : you cant always set the curr index like this...
 
-            log.red('not at the bottom yet... level down', lastIndex);
             lastIndex = index;
+            log.red('not at the bottom yet... level down', lastIndex);
             _buildUniques(lastIndex, (spotIndex + 1));
         }
 
