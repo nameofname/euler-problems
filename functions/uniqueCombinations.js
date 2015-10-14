@@ -87,19 +87,12 @@ _buildUniques = function (lastIndex, spotIndex) {
         } else {
 
             // if we are not at the bottom of the tree (or the end of the loop) then we need to push another number
-            // to the currCombo. Set the lastIndex to the current index before proceeding. 
+            // to the currCombo. Set the lastIndex to the current index before proceeding.
             lastIndex = index;
             _buildUniques(lastIndex, (spotIndex + 1));
         }
 
     }
 };
-
-
-
-//var test = getUniques([1,2,3,4,5], 3);
-//
-//log.green(JSON.stringify(test));
-
 
 module.exports = getUniques;
