@@ -28,7 +28,19 @@ var triangleNumbers = function (nth) {
     return triangles[nth];
 };
 
-
+/**
+ * This is the actual efficient algorithm for finding the triangle number. Actually, it's not an algorithm, it's
+ * fucking math. The predicate is that you form a rectangle by doubling your triangle. The area is n * (n+1). Then
+ * divide by 2. Visuals :
+ *
+ * x - - - -
+ * x x - - -
+ * x x x - -
+ * x x x x -
+ *
+ * @param n
+ * @returns {number}
+ */
 var triangleNumbers1 = function (n) {
     return (n * (n+1)) / 2;
 };
