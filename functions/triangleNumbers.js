@@ -4,9 +4,17 @@ var triangles = {
     1 : 1
 };
 var highestNth = 1;
-//var l = require('../lib/colorLog').blue;
+var l = require('../lib/colorLog').blue;
 
-var _getTriangle = function (nth) {
+/**
+ * A triangle number is produced by adding the natural numbers sequentially, so the 3rd triangle number is :
+ *      1 + 2 + 3 = 5
+ * Here I store all encountered triangle numbers as I generate them in a map called triangles. If I encounter a number
+ * in the map while looping downwards I add it and stop going.
+ * @param nth
+ * @returns {*}
+ */
+var triangleNumbers = function (nth) {
 
     if (nth < highestNth) {
         return triangles[nth];
@@ -19,8 +27,7 @@ var _getTriangle = function (nth) {
     highestNth = nth;
 
     return triangles[nth];
-    //return triangles;
 };
 
 
-module.exports = _getTriangle;
+module.exports = triangleNumbers;

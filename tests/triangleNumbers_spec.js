@@ -3,7 +3,7 @@
 var triangleNumbers = require('../functions/triangleNumbers');
 var log = require('../lib/colorLog');
 
-var test1 = triangleNumbers(10);
+var test1 = triangleNumbers(7);
 log.green(JSON.stringify(test1));
 
 var test2 = triangleNumbers(20);

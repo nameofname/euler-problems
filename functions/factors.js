@@ -5,7 +5,7 @@ var factorsMap = {};
 /**
  * A more efficient factoring algorithm. The more you use it it remembers all the factors of numbers previously run
  * through the system by storing the results in factorsMap - indexed by number. So, while the loop in the factors
- * function is finding more factors for a given number if it encounters a lower number which is a factor it can stop
+ * function is finding more factors for a given number, if it encounters a lower number which is a factor it can stop
  * going and merge it's array of found factors with those of the lower number.
  * @param n
  * @returns {*}
