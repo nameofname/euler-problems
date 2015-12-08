@@ -5,7 +5,7 @@ var currIndex = 1;
 var currTriangle;
 var numFactors;
 var factors = require('../functions/factors');
-var triangles = require('../functions/triangleNumbers');
+var triangles = require('../functions/triangleNumber');
 var l = require('../lib/colorLog').green;
 
 

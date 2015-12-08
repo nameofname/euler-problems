@@ -13,7 +13,7 @@ var highestNth = 1;
  * @param nth
  * @returns {*}
  */
-var triangleNumbers = function (nth) {
+var triangleNumber = function (nth) {
 
     if (nth < highestNth) {
         return triangles[nth];
@@ -41,8 +41,8 @@ var triangleNumbers = function (nth) {
  * @param n
  * @returns {number}
  */
-var triangleNumbers1 = function (n) {
+var triangleNumber1 = function (n) {
     return (n * (n+1)) / 2;
 };
 
-module.exports = triangleNumbers1;
+module.exports = triangleNumber1;
