@@ -4,7 +4,6 @@ var triangles = {
     1 : 1
 };
 var highestNth = 1;
-var l = require('../lib/colorLog').blue;
 
 /**
  * A triangle number is produced by adding the natural numbers sequentially, so the 3rd triangle number is :
@@ -30,4 +29,8 @@ var triangleNumbers = function (nth) {
 };
 
 
-module.exports = triangleNumbers;
+var triangleNumbers1 = function (n) {
+    return (n * (n+1)) / 2;
+};
+
+module.exports = triangleNumbers1;
