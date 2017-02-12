@@ -1,6 +1,6 @@
 "use strict";
 
-function bubbleSort (arr) {
+const bubbleSortOld = function (arr) {
     var curr;
     var last;
     var tmp;
@@ -26,6 +26,22 @@ function bubbleSort (arr) {
     }
 
     return arr;
-}
+};
+
+// improved version
+const bubbleSort = arr => {
+    let swapOccurred = false;
+    arr.forEach((val, idx) => {
+        let tmp;
+        if (val > arr[idx+1]) {
+            tmp = arr[idx+1];
+            arr[idx+1] = val;
+            arr[idx] = tmp;
+            swapOccurred = true;
+        }
+    });
+    if (swapOccurred) return bubbleSort(arr);
+    return arr;
+};
 
 module.exports = bubbleSort;

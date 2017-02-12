@@ -5,15 +5,15 @@ var currIndex = 1;
 var currTriangle;
 var numFactors;
 var factors = require('../functions/factors');
-var triangles = require('../functions/triangleNumber');
+var triangleNumber = require('../functions/triangleNumber');
 var l = require('../lib/colorLog').green;
 
 
-while (passing === false) {
+while (!passing) {
     l('finding triangle numbers and their factors');
 
     // first, factor the current iterator.
-    currTriangle = triangles(currIndex);
+    currTriangle = triangleNumber(currIndex);
     numFactors = factors(currTriangle).length;
 
     l('current number of factors for '+currTriangle+': ', numFactors);

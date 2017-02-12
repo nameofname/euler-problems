@@ -1,7 +1,7 @@
 "use strict";
 
 /**
- * Gets all possible unique combinations of N "spots" from an array.
+ * Gets all possible unique combinations of N "spots" from an array where REPETITION IS NOT ALLOWED.
  *
  * @param array - The array to get unique values from
  * @param spots - the number of spots in each unique combination. The number of spots must be less than the length
