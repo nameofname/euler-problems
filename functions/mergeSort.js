@@ -3,6 +3,28 @@
 
 let itar = 0;
 
+
+const mergeSort = (arr) => {
+
+    if (arr.length === 1) {
+        return arr;
+    } else {
+
+        const halfWay = Math.floor(arr.length / 2);
+        let arr1 = arr.slice(0, halfWay);
+        let arr2 = arr.slice(halfWay, arr.length);
+
+        if (arr1.length > 1) {
+            arr1 = mergeSort(arr1);
+        }
+        if (arr2.length > 1) {
+            arr2 = mergeSort(arr2);
+        }
+
+        return _merge(arr1,arr2);
+    }
+};
+
 const _merge = (arr1, arr2) => {
     const arr = [];
     const len = arr1.length + arr2.length;
@@ -33,28 +55,6 @@ const _merge = (arr1, arr2) => {
 
     }
     return arr;
-};
-
-
-const mergeSort = (arr) => {
-
-    if (arr.length === 1) {
-        return arr;
-    } else {
-
-        const halfWay = Math.floor(arr.length / 2);
-        let arr1 = arr.slice(0, halfWay);
-        let arr2 = arr.slice(halfWay, arr.length);
-
-        if (arr1.length > 1) {
-            arr1 = mergeSort(arr1);
-        }
-        if (arr2.length > 1) {
-            arr2 = mergeSort(arr2);
-        }
-
-        return _merge(arr1,arr2);
-    }
 };
 
 
