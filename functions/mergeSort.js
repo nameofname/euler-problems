@@ -20,7 +20,6 @@ const _merge = (arr1, arr2) => {
             highIdx++;
         } else if (right === undefined) {
             arr[i] = left;
-            arr[i] = (left === undefined) ? right : left;
             lowIdx++;
         } else {
             if (left <= right) {
