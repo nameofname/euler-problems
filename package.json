@@ -1,0 +1,11 @@
+{
+  "name": "euler-problems",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:nameofname/euler-problems.git",
+  "author": "nameofname <nameofemail@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.3.3"
+  }
+}
